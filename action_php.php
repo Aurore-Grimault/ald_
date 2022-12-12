@@ -1,16 +1,22 @@
-<?php
-    if (isset($_POST['message'])) {
-        $entete  = 'MIME-Version: 1.0' . "\r\n";
-        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-        $entete .= 'From: auroreglt@hotmail.fr' . "\r\n";
-        $entete .= 'Reply-to: ' . $_POST['email'];
+<?php 
 
-        $message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
-        <p><b>Email : </b>' . $_POST['email'] . '<br>
-        <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
+$msg = "Nom:\t$Nomr\n";
+$msg .= "E-mail:\t$email\n";
+$msg .= "Message:\t$message\n\n";
 
-        $retour = mail('auroregrimault@hotmail.fr', 'Envoi depuis page Contact', $message, $entete);
-        if($retour)
-            echo '<p>Votre message a bien été envoyé.</p>';
-    }
-    ?>
+$recipient = "tonCourriel@mail.com";
+$subject = "Formulaire";
+
+$mailheaders = "From: Mon site web<> \n";
+$mailheaders .= "Reply-To: $CP\n\n";
+
+mail($recipient, $subject, $msg, $mailheaders);
+
+echo "<HTML><HEAD>";
+echo "<TITLE>Formulaire envoyer!</TITLE></HEAD><BODY>";
+echo "<H1 align=center>Merci, $nom </H1>";
+echo "<P align=center>";
+echo "Votre formulaire à bien été envoyé !</P>";
+echo "</BODY></HTML>";
+
+?> 
