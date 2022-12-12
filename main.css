@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 1000px;
+}
+
+header{
+    border-bottom: 1px solid #000;
+    /* background-attachment: fixed; */
+    background-color:  rgb(89, 144, 247);
+}
+
+header li {
+    display: inline-block;
+    vertical-align: top;
+    /* position:relative; */
+
+}
+
+header li a {
+    display: block;
+    padding: 10px;
+}
+
+header li:hover a {
+    background-color:  rgb(40, 112, 245);
+    color: #000;
+}
+
+header li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    color:rgb(216, 126, 9);
+}
+
+.sub-menu li {
+    display: block;
+}
+
+.sub-menu li a {
+    color:  #1c87c9;
+}
+
+
+
+.sub-menu li:hover a {
+    background-color:rgb(231, 218, 101);
+    color: #000;
+}
+
+section.wrapper {
+    margin-top: 100px;
+}
+
+
+
+
+
+
