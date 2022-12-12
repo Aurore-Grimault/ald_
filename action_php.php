@@ -4,7 +4,7 @@ $msg = "Nom:\t$Nomr\n";
 $msg .= "E-mail:\t$email\n";
 $msg .= "Message:\t$message\n\n";
 
-$recipient = "tonCourriel@mail.com";
+$recipient = "auroregrimault@hotmail.fr";
 $subject = "Formulaire";
 
 $mailheaders = "From: Mon site web<> \n";
